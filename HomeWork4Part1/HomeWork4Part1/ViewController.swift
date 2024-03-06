@@ -9,14 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var UILabel: UILabel!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var yoy: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        UILabel.text = "Wellcome!"
+        label.text = "Welcome!"
+        yoy.setTitle("yoy" , for: .normal)
+        
     }
- 
+    @IBAction func button(_ sender: UIButton) {
+        sender.setTitle("yoy2", for: .normal)
+        label.text = "No Welcome!"
+    }
     
+
 }
 
